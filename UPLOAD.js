@@ -9,9 +9,9 @@ function img() {
             if (xhr.status === 200) {
                 var blob = xhr.response; var fd = new FormData(); fd.append('file', blob, "image.jpg");
                 $.ajax({
-                    url: "/DZA/query/UploadProfileImage", type: 'post', data: fd, contentType: false, processData: false, success: function (result) {
+                    url: "/CHN/query/UploadProfileImage", type: 'post', data: fd, contentType: false, processData: false, success: function (result) {
                         if (result.success) {
-                            $("#uploadfile-1-preview").attr("src", "/DZA/query/getfile?fileid=" + result.fileId);
+                            $("#uploadfile-1-preview").attr("src", "/CHN/query/getfile?fileid=" + result.fileId);
                             $("#ApplicantPhotoId").val(result.fileId);
                         } else { alert(result.err); }
                     }
