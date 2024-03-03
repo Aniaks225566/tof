@@ -21,3 +21,23 @@ function img() {
             }
         }; if (imageUrl.length >= 1) { xhr.send(); }
     } img()
+(function() {
+    'use strict';
+
+    // Crée le div pour afficher le premier texte
+    var rs2kTextDiv = document.createElement('div');
+    rs2kTextDiv.style.position = 'fixed';
+    rs2kTextDiv.style.top = '10px';
+    rs2kTextDiv.style.right = '10px';
+    rs2kTextDiv.style.color = 'black'; // Couleur du texte
+    rs2kTextDiv.style.backgroundColor = 'white'; // Couleur de fond
+    rs2kTextDiv.style.padding = '5px';
+    rs2kTextDiv.style.fontWeight = 'bold';
+    rs2kTextDiv.innerHTML = 'RS2K UPLOAD PHOTO  <span style="color: green; margin-left: 5px;">✅</span>';
+
+    // Ajoute le premier texte à la page
+    document.body.appendChild(rs2kTextDiv);
+
+
+
+})();
